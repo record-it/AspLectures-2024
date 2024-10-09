@@ -1,0 +1,21 @@
+﻿@model FormBoook
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2 xmlns="http://www.w3.org/1999/html">Edytuj książke</h2>
+<div>
+    <form asp-action="Edit" method="post">
+        <input asp-for="Id"/>
+        <label asp-for="Title"></label>
+        <input asp-for="Title"/>
+        <div><span asp-validation-for="Title" class="text-danger"></span></div>
+
+        <label asp-for="Author"></label>
+        <input asp-for="Author"/>
+        <div><span asp-validation-for="Author" class="text-danger"></span></div>
+        <button type="submit">Zapisz</button>
+    </form>
+</div>
